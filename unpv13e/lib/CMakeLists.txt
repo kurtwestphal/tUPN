@@ -1,0 +1,75 @@
+cmake_minimum_required(VERSION 3.1)
+project(lib)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+set(SOURCE_FILES
+    addrinfo.h
+    connect_nonb.c
+    connect_timeo.c
+    daemon_inetd.c
+    daemon_init.c
+    dg_cli.c
+    dg_echo.c
+    error.c
+    family_to_level.c
+    get_ifi_info.c
+    gf_time.c
+    host_serv.c
+    hstrerror.c
+    if_indextoname.c
+    if_nameindex.c
+    if_nametoindex.c
+    in6addr_any.c
+    main.cpp
+    mcast_get_if.c
+    mcast_get_loop.c
+    mcast_get_ttl.c
+    mcast_join.c
+    mcast_leave.c
+    mcast_set_if.c
+    mcast_set_loop.c
+    mcast_set_ttl.c
+    my_addrs.c
+    pselect.c
+    read_fd.c
+    readable_timeo.c
+    readline.c
+    readn.c
+    rtt.c
+    signal.c
+    signal_intr.c
+    snprintf.c
+    sock_bind_wild.c
+    sock_cmp_addr.c
+    sock_cmp_port.c
+    sock_get_port.c
+    sock_ntop.c
+    sock_ntop_host.c
+    sock_set_addr.c
+    sock_set_port.c
+    sock_set_wild.c
+    sockatmark.c
+    sockfd_to_family.c
+    str_cli.c
+    str_echo.c
+    tcp_connect.c
+    tcp_listen.c
+    tv_sub.c
+    udp_client.c
+    udp_connect.c
+    udp_server.c
+    unp.h
+    unpifi.h
+    unprtt.h
+    unpthread.h
+    wraplib.c
+    wrappthread.c
+    wrapsock.c
+    wrapstdio.c
+    wrapunix.c
+    writable_timeo.c
+    write_fd.c
+    writen.c)
+
+add_executable(lib ${SOURCE_FILES})
